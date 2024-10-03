@@ -8,7 +8,20 @@ body {
     background-color: rgb(255, 255, 255);
     position: relative;
 }
+header{
+    width:100vw;
+}
 
+header > *{
+
+
+
+}
+.row {margin: 26px;
+}
+ 
+.happyhour {margin: 0 auto; display:block}
+=======
 header > *{
     width: 100%;
 }
@@ -24,8 +37,27 @@ header > *{
     background-size: cover; 
 } 
 
+
 h1 {
-    color: white;
+    color: black;
+    text-align: center;
+}
+ p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+}
+ p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+h3 {
+    color: black;
     text-align: center;
 }
  p {
@@ -58,7 +90,7 @@ h3 {
     margin-bottom: 3px;
 }
 .background {
-    background: plum;
+    background: black;
     background-blend-mode: darken;
     background-size: cover;
 }
@@ -96,7 +128,7 @@ h3 {
 }
 
 .firstsection {
-    background-color: green;
+    background-color: red;
     height: 400px;
 }
 .secondsection {
@@ -121,13 +153,7 @@ h3 {
 .secondhalf {
     width: 30%;
 }
-.secondhalf img {
-    width: 70%;
-    border: 4px solid rgb(32, 11, 151);
-    border-radius: 150px;
-    display: block;
-    margin: auto;
-}
+
 .text-big {
     font-family: 'Piazzolla', serif;
     font-weight: bold;
@@ -139,7 +165,7 @@ h3 {
 .btn {
     padding: 8px 20px;
     margin: 7px 0;
-    border: 2px solid greenyellow;
+    border: 2px solid black;
     border-radius: 8px;
     background: none;
     color: tomato;
@@ -149,12 +175,12 @@ h3 {
     padding: 6px 10px;
     vertical-align: middle;
 }
-.section {
+.food {
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 90%;
+    max-width: 80;
     margin: auto;
 }
 .section-Left {

@@ -2,20 +2,22 @@ const form = document.getElementById("form");
 const button = document.getElementById("cool");
 
 
-// store info to local storage
-form.addEventListener("submit", (e) => {
-  const lastname = document.getElementById("first_name").value;
-    e.preventDefault();
-  console.log(lastname);
-  localStorage.setItem("panda", lastname);
-});
-
 
 // get info from local storage
 button.addEventListener("click", (e) => {
     e.preventDefault();
-  const storedInfo = localStorage.getItem("panda");
-  const outputH1 = document.getElementById("output");
-
-  outputH1.innerHTML = storedInfo;
+    
+  // retrieve deal information
+  const deal = {}
+  // retrieving saved deals from local storage or setting up an empty array for deals 
+  const saveddeals = JSON.parse (localStorage.getItem("saveddeals")) ||[]
+  saveddeals.push (deal)
+  localStorage.setItem ("saveddeals",JSON.stringify(saveddeals))
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.tooltipped');
+  var instances = M.Tooltip.init(elems, options);
+});
+
