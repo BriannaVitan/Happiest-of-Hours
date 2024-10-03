@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: lightblue;
+    background-color: rgb(255, 255, 255);
     position: relative;
 }
 header{
@@ -15,11 +15,29 @@ header{
 header > *{
 
 
+
 }
 .row {margin: 26px;
 }
  
 .happyhour {margin: 0 auto; display:block}
+=======
+header > *{
+    width: 100%;
+}
+#main {
+    margin-top: 6%;
+    padding: auto;
+}
+
+.dallas-skyline {
+    aspect-ratio: 100 / 38;
+    width: 100vw;
+    background-image: url("https://media.geeksforgeeks.org/wp-content/uploads/20210310024310/img1.png"); 
+    background-size: cover; 
+} 
+
+
 h1 {
     color: black;
     text-align: center;
@@ -38,6 +56,23 @@ h2 {
     font-size: 20px;
 }
 
+h3 {
+    color: black;
+    text-align: center;
+}
+ p {
+    font-family: verdana;
+    font-size: 20px;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+}
+ p {
+    font-family: verdana;
+    font-size: 20px;
+}
 h3 {
     color: black;
     text-align: center;
@@ -91,12 +126,7 @@ h3 {
     width: 30%;
     text-align: right;
 }
-#search {
-    padding: 5px;
-    font-size: 17px;
-    border: 2px solid grey;
-    border-radius: 9px;
-}
+
 .firstsection {
     background-color: red;
     height: 400px;
@@ -192,6 +222,8 @@ footer {
     font-size: 17px;
     border: 2px solid grey;
     border-radius: 9px;
+    display: inline-block;
+
 }
 .btn-sm {
     padding: 8px 20px;
@@ -201,3 +233,4 @@ img {
     max-width: 100%;
     height: auto;
 }
+
