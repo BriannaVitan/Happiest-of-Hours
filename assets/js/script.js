@@ -1,57 +1,57 @@
+const LOCALSTORAGE_KEY = "panda";
 const form = document.getElementById("form");
 const button = document.getElementById("search");
-const LOCALSTORAGE_KEY = "panda";
 const tgButton = document.getElementById("tgsave");
 const cmButton = document.getElementById("cmsave");
+
 const shellsearch = () => {
-  
   const storedInfo = localStorage.getItem(LOCALSTORAGE_KEY);
-  // const outputH1 = document.getElementById("output");
-  const outputH1 = document.getElementById("");
-  outputH1.textContent = storedInfo;
+  console.log("Local storage:", storedInfo); // Added missing parenthesis
 };
 
-// store info to local storage
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const name = document.getElementById("name").value;
-  console.log(name);
-  localStorage.setItem(LOCALSTORAGE_KEY, name);
+// Ensure everything runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Get info from local storage on load
   shellsearch();
-});
 
-// get info from local storage
-tgButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const selectedDeal = document.getElementById("tg").innerHTML;
-  const selectedDealDetails = document.getElementById("tgdetails").innerText;
-  // retrieve deal information
-  const deal = { deal: selectedDeal, details: selectedDealDetails };
-  // retrieving saved deals from local storage or setting up an empty array for deals
-  const saveddeals = JSON.parse(localStorage.getItem("saveddeals")) || [];
-  saveddeals.push(deal);
-  localStorage.setItem("saveddeals", JSON.stringify(saveddeals));
-});
+  // Store info to local storage
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name");
+    console.log(name.value); // Log the value of the name
+    localStorage.setItem(LOCALSTORAGE_KEY, name.value);
+    name.value = "";
+  });
 
-cmButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const selectedDeal = document.getElementById("cm").innerHTML;
-  const selectedDealDetails = document.getElementById("cmdetails").innerText;
-  // retrieve deal information
-  const deal = { deal: selectedDeal, details: selectedDealDetails };
-  // retrieving saved deals from local storage or setting up an empty array for deals
-  const saveddeals = JSON.parse(localStorage.getItem("saveddeals")) || [];
-  saveddeals.push(deal);
-  localStorage.setItem("saveddeals", JSON.stringify(saveddeals));
-});
+  // Save TG deals to local storage
+  tgButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const selectedDeal = document.getElementById("tg").innerHTML;
+    const selectedDealDetails = document.getElementById("tgdetails").innerText;
+    const deal = { deal: selectedDeal, details: selectedDealDetails };
+    const saveddeals = JSON.parse(localStorage.getItem("saveddeals")) || [];
+    saveddeals.push(deal);
+    localStorage.setItem("saveddeals", JSON.stringify(saveddeals));
+  });
 
-    document.addEventListener("DOMContentLoaded", function () {
-        var elems = document.querySelectorAll(".tooltipped");
-        M.Tooltip.init(elems, {});
-});
+  // Save CM deals to local storage
+  cmButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const selectedDeal = document.getElementById("cm").innerHTML;
+    const selectedDealDetails = document.getElementById("cmdetails").innerText;
+    const deal = { deal: selectedDeal, details: selectedDealDetails };
+    const saveddeals = JSON.parse(localStorage.getItem("saveddeals")) || [];
+    saveddeals.push(deal);
+    localStorage.setItem("saveddeals", JSON.stringify(saveddeals));
+  });
 
+  // Initialize tooltips
+  var elems = document.querySelectorAll(".tooltipped");
+  M.Tooltip.init(elems, {});
 
-document.querySelector(".signup-today") .addEventListener("click",function() {
-  var email = document.querySelector(".email").value;
-  console.log(email); 
+  // Signup button click
+  document.querySelector(".signup-today").addEventListener("click", function() {
+    var email = document.querySelector(".email").value;
+    console.log(email); 
+  });
 });

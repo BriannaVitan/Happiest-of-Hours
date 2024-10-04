@@ -60,7 +60,9 @@ form{
     margin: auto;
     margin-bottom: 3px;
 }
-
+.feature {
+    width: 100%;
+}
 .background {
     background: black;
     background-blend-mode: darken;
