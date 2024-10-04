@@ -5,37 +5,30 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     background-color: rgb(255, 255, 255);
     position: relative;
 }
-
 header {
     width: 100vw;
 }
-
 .row {
     margin: 26px;
 }
-
 .happyhour {
     margin: 0 auto;
     display: block;
 }
-
 #main {
     margin-top: 6%;
     padding: auto;
 }
-
 .dallas-skyline {
     aspect-ratio: 100 / 38;
     width: 100vw;
     background-image: url("https://media.geeksforgeeks.org/wp-content/uploads/20210310024310/img1.png");
     background-size: cover;
 }
-
 h1,
 h2,
 h3 {
@@ -43,28 +36,23 @@ h3 {
     color: black;
     text-align: center;
 }
-
 p {
     font-family: verdana;
     font-size: 20px;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
 }
-
 .navbar-brand {
     margin-left: 30px;
     font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
     font-style: bolder;
 }
-
 form{
     margin-left: 550px;
 }
-
 .navbar img {
     display: block;
     width: 50px;
@@ -72,13 +60,11 @@ form{
     margin: auto;
     margin-bottom: 3px;
 }
-
 .background {
     background: black;
     background-blend-mode: darken;
     background-size: cover;
 }
-
 .nav-list {
     width: 70%;
     display: flex;
@@ -86,50 +72,40 @@ form{
     gap: 20px;
     list-style: none;
 }
-
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .logo img {
     width: 180px;
     border-radius: 50px;
 }
-
 .nav-list li {
     padding: 10px;
 }
-
 .nav-list li a {
     text-decoration: none;
     color: rgb(199, 18, 18);
 }
-
 .nav-list li a:hover {
     color: aquamarine;
 }
-
 .rightnav {
     width: 100%;
     text-align: right;
     margin-top: 10px;
 }
-
 .firstsection,
 .secondsection {
     height: 400px;
 }
-
 .firstsection {
     background-color: red;
 }
-
 .secondsection {
     background-color: blue;
 }
-
 .box-main {
     display: flex;
     justify-content: center;
@@ -139,18 +115,15 @@ form{
     margin: auto;
     height: 80%;
 }
-
 .firsthalf {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .secondhalf {
     width: 30%;
 }
-
 .secondhalf img {
     width: 70%;
     border: 4px solid rgb(32, 11, 151);
@@ -158,17 +131,14 @@ form{
     display: block;
     margin: auto;
 }
-
 .text-big {
     font-family: 'Piazzolla', serif;
     font-weight: bold;
     font-size: 35px;
 }
-
 .text-small {
     font-size: 18px;
 }
-
 .btn {
     padding: 8px 20px;
     margin: 7px 0;
@@ -178,12 +148,10 @@ form{
     color: tomato;
     cursor: pointer;
 }
-
 .btn-sm {
     padding: 6px 10px;
     margin: 7px 5px;
 }
-
 .section {
     height: 400px;
     display: flex;
@@ -192,33 +160,27 @@ form{
     max-width: 80%;
     margin: auto;
 }
-
 .section-Left {
     flex-direction: row-reverse;
 }
-
 .paras {
     padding: 0 65px;
 }
-
 .thumbnail img {
     width: 250px;
     border: 2px solid black;
     border-radius: 26px;
     margin-top: 19px;
 }
-
 .center {
     text-align: center;
 }
-
 .text-footer {
     padding: 30px 0;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
 }
-
 footer {
     width: 100%;
     max-width: 100%;
@@ -229,7 +191,6 @@ footer {
     background-color: black;
     text-align: center;
 }
-
 #search {
     box-sizing: border-box;
     width: 70%;
@@ -239,7 +200,6 @@ footer {
     border-radius: 9px;
     color: tomato;
 }
-
 img {
     max-width: 100%;
     height: auto;
