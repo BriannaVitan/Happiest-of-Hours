@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
   shellsearch();
 });
 
-// get info from local storage
+get info from local storage
 tgButton.addEventListener("click", (e) => {
   e.preventDefault();
   const selectedDeal = document.getElementById("tg").innerHTML;
@@ -47,4 +47,10 @@ cmButton.addEventListener("click", (e) => {
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".tooltipped");
   var instances = M.Tooltip.init(elems, options);
+  
+});
+
+document.querySelector(".signup-today") .addEventListener("click",function() {
+  var email = document.querySelector(".email").value;
+  console.log(email); 
 });
