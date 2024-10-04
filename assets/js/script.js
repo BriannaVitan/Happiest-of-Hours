@@ -4,23 +4,24 @@ const LOCALSTORAGE_KEY = "panda";
 
 const shellsearch=() => {
   const storedInfo = localStorage.getItem(LOCALSTORAGE_KEY);
-  const outputH1 = document.getElementById("output");
+  const outputH1 = document.getElementById("");
   outputH1.textContent = storedInfo;
 };
 
 // store info to local storage
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const name = document.getElementById("name").value;
+  const name = document.getElementById("name")
   console.log(name);
-  localStorage.setItem(LOCALSTORAGE_KEY, name);
+  localStorage.setItem(LOCALSTORAGE_KEY, name.value);
+  name.value = "";
  shellsearch()
 });
 
 
 // get info from local storage
 button.addEventListener("click", (e) => {
-    e.preventDefault();
+  e.preventDefault();
     
   // retrieve deal information
   const deal = {}
