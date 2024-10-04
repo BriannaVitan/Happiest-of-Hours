@@ -1,8 +1,10 @@
 const form = document.getElementById("form");
 const button = document.getElementById("search");
 const LOCALSTORAGE_KEY = "panda";
+const tgButton = document.getElementById("tgsave");
+const cmButton = document.getElementById("cmsave");
 
-const shellsearch=() => {
+const shellsearch = () => {
   const storedInfo = localStorage.getItem(LOCALSTORAGE_KEY);
   const outputH1 = document.getElementById("");
   outputH1.textContent = storedInfo;
@@ -18,22 +20,36 @@ form.addEventListener("submit", (e) => {
  shellsearch()
 });
 
-
 // get info from local storage
-button.addEventListener("click", (e) => {
+button.addEventListener("mouseover", (e) => {
   e.preventDefault();
     
+tgButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const selectedDeal = document.getElementById("tg").innerHTML;
+  const selectedDealDetails = document.getElementById("tgdetails").innerText;
+
   // retrieve deal information
-  const deal = {}
-  // retrieving saved deals from local storage or setting up an empty array for deals 
-  const saveddeals = JSON.parse (localStorage.getItem("saveddeals")) ||[]
-  saveddeals.push (deal)
-  localStorage.setItem ("saveddeals",JSON.stringify(saveddeals))
+  const deal = { deal: selectedDeal, details: selectedDealDetails };
+  // retrieving saved deals from local storage or setting up an empty array for deals
+  const saveddeals = JSON.parse(localStorage.getItem("saveddeals")) || [];
+  saveddeals.push(deal);
+  localStorage.setItem("saveddeals", JSON.stringify(saveddeals));
 });
 
+cmButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const selectedDeal = document.getElementById("cm").innerHTML;
+  const selectedDealDetails = document.getElementById("cmdetails").innerText;
+  // retrieve deal information
+  const deal = { deal: selectedDeal, details: selectedDealDetails };
+  // retrieving saved deals from local storage or setting up an empty array for deals
+  const saveddeals = JSON.parse(localStorage.getItem("saveddeals")) || [];
+  saveddeals.push(deal);
+  localStorage.setItem("saveddeals", JSON.stringify(saveddeals));
+});
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.tooltipped');
+document.addEventListener("DOMContentLoaded", function () {
+  var elems = document.querySelectorAll(".tooltipped");
   var instances = M.Tooltip.init(elems, options);
 });
-
