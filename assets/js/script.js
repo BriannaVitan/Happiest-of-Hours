@@ -3,10 +3,11 @@ const button = document.getElementById("search");
 const LOCALSTORAGE_KEY = "panda";
 const tgButton = document.getElementById("tgsave");
 const cmButton = document.getElementById("cmsave");
-
 const shellsearch = () => {
+  
   const storedInfo = localStorage.getItem(LOCALSTORAGE_KEY);
-  const outputH1 = document.getElementById("output");
+  // const outputH1 = document.getElementById("output");
+  const outputH1 = document.getElementById("");
   outputH1.textContent = storedInfo;
 };
 
@@ -19,7 +20,7 @@ form.addEventListener("submit", (e) => {
   shellsearch();
 });
 
-get info from local storage
+// get info from local storage
 tgButton.addEventListener("click", (e) => {
   e.preventDefault();
   const selectedDeal = document.getElementById("tg").innerHTML;
@@ -44,11 +45,11 @@ cmButton.addEventListener("click", (e) => {
   localStorage.setItem("saveddeals", JSON.stringify(saveddeals));
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  var elems = document.querySelectorAll(".tooltipped");
-  var instances = M.Tooltip.init(elems, options);
-  
+    document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".tooltipped");
+        M.Tooltip.init(elems, {});
 });
+
 
 document.querySelector(".signup-today") .addEventListener("click",function() {
   var email = document.querySelector(".email").value;
